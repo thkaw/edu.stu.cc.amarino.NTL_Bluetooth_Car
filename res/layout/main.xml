@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout
+	android:id="@+id/widget0"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+<Button
+    android:id="@+id/back_Button"
+    android:layout_width="122dp"
+    android:layout_height="wrap_content"
+    android:layout_x="98dp"
+    android:layout_y="276dp"
+    android:text="Back" android:onClick="BackOnClick"/>
+
+<Button
+    android:id="@+id/forward_Button"
+    android:layout_width="116dp"
+    android:layout_height="wrap_content"
+    android:layout_x="98dp"
+    android:layout_y="108dp"
+    android:text="Forward" android:onClick="ForwardOnClick"/>
+
+<Button
+    android:id="@+id/left_Button"
+    android:layout_width="83dp"
+    android:layout_height="108dp"
+    android:layout_x="9dp"
+    android:layout_y="165dp"
+    android:text="Left" android:onClick="LeftOnClick"/>
+
+<Button
+    android:id="@+id/right_Button"
+    android:layout_width="88dp"
+    android:layout_height="110dp"
+    android:layout_x="216dp"
+    android:layout_y="159dp"
+
+    android:text="Right" android:onClick="RightOnClick"/>
+
+<EditText
+    android:id="@+id/setmac_EditText"
+    android:layout_width="186dp"
+    android:layout_height="wrap_content"
+    android:layout_x="10dp"
+    android:layout_y="12dp"
+    android:hint="00:11:12:06:00:60"
+    android:textSize="18sp" >
+
+    <requestFocus />
+
+</EditText>
+
+<Button
+    android:id="@+id/setmac_Button"
+    android:layout_width="108dp"
+    android:layout_height="wrap_content"
+    android:layout_x="202dp"
+    android:layout_y="15dp"
+    android:text="Set Mac" android:onClick="SetMacOnClick" />
+
+<SeekBar
+    android:id="@+id/power_seekBar"
+    android:layout_width="288dp"
+    android:layout_height="wrap_content"
+    android:layout_x="16dp"
+    android:layout_y="354dp" />
+
+<Button
+    android:id="@+id/stop_Button"
+    android:layout_width="92dp"
+    android:layout_height="98dp"
+    android:layout_x="112dp"
+    android:layout_y="168dp"
+    
+    android:text="Stop" android:onClick="StopOnClick" />
+
+<TextView
+    android:id="@+id/powerval_LargeText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_x="45dp"
+    android:layout_y="400dp"
+    android:text="Power"
+    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+</AbsoluteLayout>
