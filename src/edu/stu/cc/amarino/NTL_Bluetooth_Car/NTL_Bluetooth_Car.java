@@ -2,13 +2,18 @@
   NTL_Bluetooth_Car - Reference MultiColorLamp's Source code to build
   Copyright (c) 2012 Nathaniel_Chen 
   
-  Ver 1.0_Beta
+  Ver 2.1_beta
    
   Not allow commercial use.
   E-Mail: s99115247@stu.edu.tw 
   
   thanks MIT research help me so that I can do this project ;) 
  
+ 
+ version history
+ 2.1_beta--Fix Programe Crash when execute Amarino.connect(due to ADT update reason). @ 2012/08/09
+ 1.5_beta--Improve UI Experience.
+ 1.0_beta--First re-modify control program.
  =========================================================================
  
   MultiColorLamp - Example to use with Amarino
@@ -42,6 +47,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
+//import android.view.View.OnClickListener;
 //import android.view.View.OnTouchListener;
 
 import android.widget.SeekBar;
@@ -75,10 +81,10 @@ public class NTL_Bluetooth_Car extends Activity implements OnSeekBarChangeListen
 	EditText setmac_ET;
 	
 	
-	Button  forward_BTN;
-	Button  back_BTN;
-	Button  left_BTN;
-	Button  right_BTN;
+	/*Button  btnForward;
+	Button  btnBack;
+	Button  btnLeft;
+	Button  btnRight;*/
 	
 	TextView powerval_Text;
 	
@@ -90,27 +96,32 @@ public class NTL_Bluetooth_Car extends Activity implements OnSeekBarChangeListen
 	
 	long lastChange;
 
+
     /** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
-
-		Amarino.connect(this, DEVICE_ADDRESS);
         
-        // get references to views defined in our main.xml layout file
-		power_SB = (SeekBar) findViewById(R.id.power_seekBar);
-     
-       // colorIndicator = findViewById(R.id.ColorIndicator);
+        Amarino.connect(this, DEVICE_ADDRESS);
 
-        // register listeners
+		power_SB = (SeekBar) findViewById(R.id.power_seekBar);
         power_SB.setOnSeekBarChangeListener(this);
         
         powerval_Text = (TextView) findViewById(R.id.powerval_LargeText);
         setmac_ET = (EditText) findViewById(R.id.setmac_EditText);
         
+       /* btnBack = (Button) findViewById(R.id.back_Button);
+        btnBack.setOnClickListener(btnBackOnClick);*/
+        
         
     }
+   /* private Button.OnClickListener btnBackOnClick = new Button.OnClickListener() {
+    	public void onClick(View v) {
+    		update_Back();
+    	}
+    	};*/
+    
     public void SetMacOnClick(View SetMacView){ //設定MAC按鈕按下之後的動作
     	Amarino.disconnect(this, DEVICE_ADDRESS);
     	DEVICE_ADDRESS = setmac_ET.toString();
