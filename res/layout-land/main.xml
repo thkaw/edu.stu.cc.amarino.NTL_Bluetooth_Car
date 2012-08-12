@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget0"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top" >
+
+    <Button
+        android:id="@+id/right_Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="14dp"
+        android:text="@string/right" />
+
+    <Button
+        android:id="@+id/stop_Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignBaseline="@+id/right_Button"
+        android:layout_alignBottom="@+id/right_Button"
+        android:layout_toLeftOf="@+id/right_Button"
+        android:text="@string/stop" />
+
+    <Button
+        android:id="@+id/forward_Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_above="@+id/right_Button"
+        android:layout_toLeftOf="@+id/right_Button"
+        android:text="@string/forward" />
+
+    <Button
+        android:id="@+id/left_Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/forward_Button"
+        android:layout_toLeftOf="@+id/stop_Button"
+        android:text="@string/left" />
+
+    <Button
+        android:id="@+id/back_Button"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/right_Button"
+        android:layout_toLeftOf="@+id/right_Button"
+        android:text="@string/back" />
+
+    <EditText
+        android:id="@+id/setmac_EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignTop="@+id/forward_Button"
+        android:layout_marginLeft="16dp"
+        android:ems="10"
+        android:hint="@string/default_mac"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/setmac_Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/setmac_EditText"
+        android:layout_below="@+id/setmac_EditText"
+        android:onClick="SetMacOnClick"
+        android:text="@string/set_mac" />
+
+    <TextView
+        android:id="@+id/powerval_LargeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/back_Button"
+        android:layout_alignLeft="@+id/setmac_Button"
+        android:text="@string/set_power"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <SeekBar
+        android:id="@+id/power_seekBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/powerval_LargeText"
+        android:layout_alignLeft="@+id/powerval_LargeText"
+        android:layout_alignRight="@+id/setmac_EditText" />
+
+</RelativeLayout>

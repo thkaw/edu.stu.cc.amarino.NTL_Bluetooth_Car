@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NTL_Bluetooth_Car</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="forward">前進</string>
+    <string name="back">後退</string>
+    <string name="left">左轉</string>
+    <string name="right">右轉</string>
+    <string name="stop">停止</string>
+    <string name="default_mac">00:11:12:06:00:60</string>
+    <string name="set_mac">設定mac</string>
+    <string name="set_power">設定出力</string>
+
+</resources>
